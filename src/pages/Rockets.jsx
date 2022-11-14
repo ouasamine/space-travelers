@@ -1,6 +1,4 @@
-const Rockets = () => {
-  return (
-    <div>Rockets</div>
-  );
-};
+const Rockets = () => (
+  <div>Rockets</div>
+);
 export default Rockets;
