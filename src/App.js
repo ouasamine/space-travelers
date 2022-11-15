@@ -13,9 +13,9 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/Rockets" element={<Rockets />} />
-        <Route path="/Missions" element={<Missions />} />
-        <Route path="/Profile" element={<MyProfile />} />
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/profile" element={<MyProfile />} />
       </Routes>
     </Router>
   );
