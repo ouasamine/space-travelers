@@ -9,7 +9,7 @@ const Mission = () => {
   useEffect(() => {
     dispatch(missions());
   }, []);
-  const data = useSelector((state) => state.missions);
+  const data = useSelector((state) => state.handleMissions.missions);
 
   return (
     <section id="missions-section">
