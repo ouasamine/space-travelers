@@ -1,0 +1,38 @@
+/* stylelint-disable no-descending-specificity */
+#missions-section {
+  margin: 15px 5%;
+}
+
+.missions-table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.missions-table thead th {
+  text-align: left;
+}
+
+.missions-table tbody tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+.missions-table td,
+.missions-table th {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+}
+
+.missions-table tbody td:nth-child(1) {
+  vertical-align: top;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.missions-table tbody td:nth-child(3) {
+  text-align: center;
+}
+
+.missions-table tbody td:nth-child(4) {
+  text-align: center;
+}

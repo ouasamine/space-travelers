@@ -11,7 +11,7 @@ const missions = createAsyncThunk(
   },
 );
 const initialState = {
-  missions: {},
+  missions: [],
   status: null,
 };
 const handleMissions = createSlice({
