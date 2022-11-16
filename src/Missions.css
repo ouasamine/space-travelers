@@ -36,3 +36,29 @@
 .missions-table tbody td:nth-child(4) {
   text-align: center;
 }
+
+.missions-table .memb-badge {
+  display: block;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #6f6f6f;
+  color: #fff;
+}
+
+.missions-table .active-badge {
+  background-color: #007fff;
+}
+
+.missions-table .memb-btn {
+  padding: 5px 2px;
+  width: 120px;
+  border: 1px solid #2c2c2c;
+  border-radius: 4px;
+  background-color: inherit;
+  color: #2c2c2c;
+}
+
+.missions-table .active-btn {
+  border: 1px solid #f00;
+  color: #ff0f0f;
+}

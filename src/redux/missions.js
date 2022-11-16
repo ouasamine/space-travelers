@@ -17,6 +17,24 @@ const initialState = {
 const handleMissions = createSlice({
   name: 'handleMissions',
   initialState,
+  reducers: {
+    joinMission(state, action) {
+      state.missions.forEach((mission) => {
+        if (mission.mission_id === action.payload) {
+          // eslint-disable-next-line no-param-reassign
+          mission.reserved = true;
+        }
+      });
+    },
+    leaveMission(state, action) {
+      state.missions.forEach((mission) => {
+        if (mission.mission_id === action.payload) {
+          // eslint-disable-next-line no-param-reassign
+          mission.reserved = false;
+        }
+      });
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(missions.fulfilled, (state, action) => {
       const newState = [];
@@ -25,6 +43,7 @@ const handleMissions = createSlice({
           mission_id: mission.mission_id,
           mission_name: mission.mission_name,
           description: mission.description,
+          reserved: false,
         });
       });
       // eslint-disable-next-line no-param-reassign
@@ -33,5 +52,6 @@ const handleMissions = createSlice({
   },
 });
 
+export const { joinMission, leaveMission } = handleMissions.actions;
 export { missions };
 export default handleMissions.reducer;
