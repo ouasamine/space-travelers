@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import TableRow from '../components/TableRow';
 import { missions } from '../missionsRedux/missions';
+import '../Missions.css';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -10,8 +11,8 @@ const Mission = () => {
   }, []);
   const data = useSelector((state) => state.missions);
   return (
-    <section>
-      <table>
+    <section id="missions-section">
+      <table className="missions-table">
         <thead>
           <tr>
             <th>Mission</th>
