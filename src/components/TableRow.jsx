@@ -2,28 +2,56 @@ import PropTypes from 'prop-types';
 
 function TableRow(props) {
   const {
-    key,
+    missionId,
     missionName,
     missionDesc,
+    missionReserved,
+    handleClick,
   } = props;
   return (
     <tr>
       <td>{missionName}</td>
       <td>{missionDesc}</td>
-      <td><span className="memb-badge">NOT A MEMBER</span></td>
       <td>
-        <button type="submit" className="memb-button" key={key}>
+        {!missionReserved && <span className="memb-badge">NOT A MEMBER</span>}
+        {missionReserved && <span className="memb-badge">Active Member</span>}
+      </td>
+      <td>
+        {!missionReserved && (
+        <button
+          type="submit"
+          className="memb-button"
+          key={missionId}
+          onClick={() => {
+            handleClick(missionId, missionReserved);
+          }}
+        >
           Join Mission
         </button>
+        )}
+        {missionReserved && (
+        <button
+          type="submit"
+          className="memb-button"
+          key={missionId}
+          onClick={() => {
+            handleClick(missionId, missionReserved);
+          }}
+        >
+          Leave Mission
+        </button>
+        )}
       </td>
     </tr>
   );
 }
 
 TableRow.propTypes = {
-  key: PropTypes.string.isRequired,
+  missionId: PropTypes.string.isRequired,
   missionName: PropTypes.string.isRequired,
   missionDesc: PropTypes.string.isRequired,
+  missionReserved: PropTypes.bool.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default TableRow;
