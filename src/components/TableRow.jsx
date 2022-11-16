@@ -14,13 +14,13 @@ function TableRow(props) {
       <td>{missionDesc}</td>
       <td>
         {!missionReserved && <span className="memb-badge">NOT A MEMBER</span>}
-        {missionReserved && <span className="memb-badge">Active Member</span>}
+        {missionReserved && <span className="memb-badge active-badge">Active Member</span>}
       </td>
       <td>
         {!missionReserved && (
         <button
           type="submit"
-          className="memb-button"
+          className="memb-btn"
           key={missionId}
           onClick={() => {
             handleClick(missionId, missionReserved);
@@ -32,7 +32,7 @@ function TableRow(props) {
         {missionReserved && (
         <button
           type="submit"
-          className="memb-button"
+          className="memb-btn active-btn"
           key={missionId}
           onClick={() => {
             handleClick(missionId, missionReserved);
