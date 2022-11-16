@@ -10,6 +10,7 @@ const Mission = () => {
     dispatch(missions());
   }, []);
   const data = useSelector((state) => state.missions);
+
   return (
     <section id="missions-section">
       <table className="missions-table">

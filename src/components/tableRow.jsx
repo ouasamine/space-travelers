@@ -1,13 +1,21 @@
 import PropTypes from 'prop-types';
 
 function TableRow(props) {
-  const { key, missionName, missionDesc } = props;
+  const {
+    key,
+    missionName,
+    missionDesc,
+  } = props;
   return (
-    <tr key={key}>
+    <tr>
       <td>{missionName}</td>
       <td>{missionDesc}</td>
-      <td>being constructed</td>
-      <td>being constructed</td>
+      <td><span className="memb-badge">NOT A MEMBER</span></td>
+      <td>
+        <button type="submit" className="memb-button" key={key}>
+          Join Mission
+        </button>
+      </td>
     </tr>
   );
 }
