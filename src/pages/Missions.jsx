@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import TableRow from '../components/TableRow';
 import { missions } from '../missionsRedux/missions';
 
 const Mission = () => {
@@ -20,7 +21,13 @@ const Mission = () => {
           </tr>
         </thead>
         <tbody>
-          
+          {data.map((mission) => (
+            <TableRow
+              key={mission.mission_id}
+              missionName={mission.mission_name}
+              missionDesc={mission.description}
+            />
+          ))}
         </tbody>
       </table>
     </section>
