@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import TableRow from '../components/TableRow';
-import { joinMission, leaveMission, missions } from '../missionsRedux/missions';
+import { joinMission, leaveMission, missions } from '../redux/missions';
 import '../Missions.css';
 
 const Mission = () => {
