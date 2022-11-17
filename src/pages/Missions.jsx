@@ -9,7 +9,7 @@ const Mission = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    if (!data) {
+    if (data.length < 1) {
       dispatch(missions());
     }
   }, []);
