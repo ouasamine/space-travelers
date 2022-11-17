@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import fetchMissions from '../apiCalls/missionsAPI';
+import fetchMissions from '../../apiCalls/missionsAPI';
 
 const GET_MISSIIONS = 'handleMissions/getMessions';
 
