@@ -1,15 +1,18 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import TableRow from '../components/TableRow';
-import { joinMission, leaveMission, missions } from '../redux/missions';
+import { joinMission, leaveMission, missions } from '../redux/missions/missions';
 import '../Missions.css';
 
 const Mission = () => {
+  const data = useSelector((state) => state.handleMissions.missions);
+
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(missions());
+    if (!data) {
+      dispatch(missions());
+    }
   }, []);
-  const data = useSelector((state) => state.handleMissions.missions);
 
   function handleClick(id, reserved) {
     if (!reserved) {
@@ -28,7 +31,7 @@ const Mission = () => {
             <th>Mission</th>
             <th>Descripton</th>
             <th>Status</th>
-            <th>{}</th>
+            <th>{ }</th>
           </tr>
         </thead>
         <tbody>
