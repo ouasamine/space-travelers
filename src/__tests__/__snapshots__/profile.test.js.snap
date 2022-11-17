@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Profile element renders properly 1`] = `
+<div
+  className="container d-flex justify-content-center my-5"
+>
+  <div>
+    <h2>
+      My Missions
+    </h2>
+    <div
+      className="card rocket-cart ms-5"
+    >
+      <ul
+        className="list-group list-group-flush"
+      >
+        <p
+          className="p-2 text-danger"
+        >
+          Please reserve a mission
+        </p>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h2
+      className="ms-5"
+    >
+      My Rockets
+    </h2>
+    <div
+      className="card rocket-cart ms-5"
+    >
+      <ul
+        className="list-group list-group-flush"
+      >
+        <p
+          className="p-2 text-danger"
+        >
+          Please reserve a rocket
+        </p>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

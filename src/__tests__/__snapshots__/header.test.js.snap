@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Header components Check if the Header section are available 1`] = `
+<div
+  id="page-header"
+>
+  <div
+    className="logo"
+  >
+    <img
+      alt="SpaceX logo"
+      src="./planet.png"
+    />
+    <h1>
+      Space Travelers' Hub
+    </h1>
+  </div>
+  <nav
+    id="nav-links"
+  >
+    <a
+      aria-current="page"
+      className="active"
+      href="/"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "underline",
+        }
+      }
+    >
+      Rockets
+    </a>
+    <a
+      className=""
+      href="/missions"
+      onClick={[Function]}
+    >
+      Missions
+    </a>
+    <a
+      className=""
+      href="/profile"
+      onClick={[Function]}
+    >
+      My Profile
+    </a>
+  </nav>
+</div>
+`;
